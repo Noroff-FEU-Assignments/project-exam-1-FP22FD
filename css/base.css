@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "mulish";
+  src: url("/assets/fonts/Mulish/static/Mulish-Bold.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "mulish";
+  src: url("/assets/fonts/Mulish/static/Mulish-Regular.ttf") format(truetype);
+}
+
+/* --------------- Desktop ---------------------------*/
+
+/* https://typescale.com/ */
+html {
+  /*16px*/
+  font-size: 100%;
+}
+
+body {
+  background: var(--color-offWhite);
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-primaryFont);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  /* margin-top: 0; */
+  font-size: 1.802rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.602rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+h4 {
+  font-size: 1.266rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+small,
+.text_small {
+  font-size: 0.889rem;
+}
+
+/*---------------------------------------*/
+
+:root {
+  --color-offWhite: #fcfcfc;
+
+  /* Used for head, footer, cards bg */
+  --color-beige: #fff7f3;
+
+  /* Used for form */
+  --color-lightGrey: #e8e8e8;
+
+  /* Used for input */
+  --color-lightPurple: rgba(108, 91, 123, 0.2);
+
+  /* Used for accents, links */
+  --color-purple: #6c5b7b;
+
+  /* Used for CTAs */
+  /* --color-lightOrange: #f8b195; */
+  --color-lightOrange: #6c5b7b;
+
+  /* Used for head, hover */
+  --color-rosa: #f67280;
+
+  /* Used for important, error */
+  --color-darkRed: #bc3547;
+
+  /* Used for fonts */
+  --color-primaryFont: #212427;
+  --color-secondaryFont: #94979e;
+
+  --my-border: 8px solid #fff7f3;
+}
+
+/* ------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primaryFont);
+  /* font-size: 18px; */
+}
+
+/* ----------------------------------------------- */
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 96px; */
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+/* -------------------------------------------------- */
+
+input[type="text"] {
+  margin-top: 4px;
+  min-height: 40px;
+
+  border: 1px solid var(--color-lightGrey);
+  background-color: var(--color-lightPurple);
+}
+
+input[type="email"] {
+  margin-top: 4px;
+  min-height: 40px;
+  border: 1px solid var(--color-lightGrey);
+  background-color: var(--color-lightPurple);
+}
+
+textarea {
+  min-height: 200px;
+  margin-top: 4px;
+
+  border: 1px solid var(--color-lightGrey);
+  background-color: var(--color-lightPurple);
+}
+
+textarea[name="input-message"]:focus {
+  border-color: transparent;
+  outline: 2px solid var(--color-rosa);
+  box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
+}
+
+input[name="email"]:focus {
+  border: 0;
+  outline: 2px solid var(--color-rosa);
+  box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
+}
+
+input[name="name"]:focus,
+input[name="email"]:focus,
+input[name="subject"]:focus {
+  outline: 2px solid var(--color-rosa);
+  box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
+}
+
+/* Ref:https://www.accessibility-developer-guide.com/examples/forms/required/[...]%20accessible*/
+.required {
+  color: var(--color-darkRed);
+  font-weight: bold;
+}
+
+/* -------------mobile--------------------------- */
+
+@media (width <= 1330px) {
+  /* https://typescale.com/ */
+  body {
+    line-height: 1.35;
+  }
+
+  h1 {
+    font-size: 1.424rem;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1.266rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}

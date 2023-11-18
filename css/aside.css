@@ -1,0 +1,15 @@
+.whoiam {
+  padding: 16px;
+  background-color: var(--color-lightPurple);
+  border: var(--my-border);
+  height: min-content;
+}
+
+.whoiam figure {
+  margin: 40px 0px 0px 0px;
+}
+
+.whoiam h2 {
+  text-transform: none;
+  font-weight: bold;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigume | Contact </title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<!-- -----JavaScript------------- -->
+
+<body onclick="((e) => { console.log('close', e); document.querySelector('dialog').close()})(event);">
+
+    <!-- -----JavaScript------------- -->
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/icons/logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">HOME</a>
+                <a href="posts.html">BLOG</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </header>
+
+        <div class="title">
+            <h1 class="page-title">Contact</h1>
+        </div>
+        <main>
+            <div>
+                <div class="post-content">
+                    <p>I love getting emails from readers! Feel free to introduce yourself, tell a joke, or share a news
+                        tip. Send me an email using the contact form below.
+                    </p>
+                    <p>Find me on Instagram, Pinterest and YouTube!</p>
+                </div>
+                <form method="get" action="/successful.html">
+                    <div class="name-email">
+                        <div class="field-name">
+                            <label for="input-name">Full name<span class="required" aria-hidden="">*</span></label>
+                            <input class="input-name" type="text" name="name" placeholder="Sophia Smith">
+                        </div>
+
+                        <div class="field-email">
+                            <label for="input-email">Email address<span class="required" aria-hidden="">*</span></label>
+                            <input class="input-email" type="email" name="email" placeholder="sophissmith@gmail.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="input-subject">Subject</label>
+                        <input class="input-subject" type="text" name="subject">
+                    </div>
+                    <div>
+                        <label for="input-message">Message<span class="required" aria-hidden="">*</span></label>
+                        <textarea class="input-message" name="input-message">
+                        </textarea>
+                    </div>
+                    <div class="required-field">
+                        <p><span class="required" aria-hidden="">*</span>Required field</p>
+                    </div>
+                    <!-- -------javascript------- -->
+                    <div>
+                        <!-- -------javascript------- -->
+                        <button type="submit" class="cta"
+                            onclick="((event)=> { event.stopPropagation(); document.querySelector('dialog').showModal() })(event)">
+                            <a href="">Submit</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- -------javascript------- -->
+
+            <!-- https://www.w3schools.com/howto/howto_css_overlay.asp -->
+            <dialog>
+                <div class="container-dialog">
+                    <div>
+                        <!-- <button>x</button> -->
+                    </div>
+                    <!-- -----JavaScript------------- -->
+                    <div class="overlay" onclick=" ((event)=> { event.stopPropagation() })(event)">
+                        <div class="txt-overlay">
+                            <!-- -----JavaScript------------- -->
+                            <h1>Thank you</h1>
+                            <p>You have successfully sent your message. We'll get in touch with you as soon as possible!
+                            </p>
+                            <div class="box-cta">
+                                <button type="submit" class="cta">
+                                    <a href="./index.html">Home</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+            <!-- ---fine overlay---- -->
+
+        </main>
+        <aside class="whoiam">
+            <div>
+                <!-- start API Wordpress -->
+                <section>
+                    <figure>
+                        <img src="./assets/images/blog/profile.photo.png" alt="profile image" class="fit-image">
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>Hi!</h2>
+
+                    <h3>
+                        My name is Fernanda and amigurumi and crochet are my hobby and passions.
+                    </h3>
+
+                    <p>Here on my blog you will find several amigurumi models for beginners,
+                        intermediates and
+                        also
+                        for
+                        those who already have
+                        some experience. I want to help people learn how to make them step by step and how
+                        to
+                        improve
+                        our
+                        making techniques!
+                    </p>
+
+                    <p>You will also love the crochet stitch tips and suggestions to make your learning
+                        even
+                        easier. You
+                        can also find me on
+                        social media, as I'm always posting news there too. There I also post tips on how to
+                        sew,
+                        wash and
+                        store your amigurumi.
+                    </p>
+
+                    <p>
+                        So enjoy the content and start making your amigurumi for friends and family now.
+                    </p>
+                    <p>Thank you</p>
+                </section>
+                <!-- end API Wordpress -->
+            </div>
+        </aside>
+        <footer>
+            <div><a href="not-available.html"><small>Copyright&copy; 2023 Fernanda Gomes. All Rights
+                        Reserved</small></a></div>
+
+            <div>
+
+                <div class="footer-box social-media-footer">
+                    <a href="https://www.instagram.com"><img
+                            src="assets/icons/icon _instagram_ -_ instagram-1_svgrepo.com.svg" alt="icon Instagram"></a>
+                    <a href="https://pinterest.com"><img
+                            src="assets/icons/icon _pinterest_ -_ pinterest-color_svgrepo.com.svg"
+                            alt="icon Twitter"></a>
+                    <a href="https://www.youtube.com"><img
+                            src="assets/icons/icon _youtube_ -_ youtube-color_svgrepo.com.png" alt="icon Youtube"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

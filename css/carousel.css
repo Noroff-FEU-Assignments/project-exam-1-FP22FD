@@ -1,0 +1,96 @@
+/* ---container------ */
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* width: 100vw; */
+  height: 673px;
+  background-color: var(--color-beige);
+  /* padding: 40px; */
+}
+
+/* -----slider------------- */
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+  padding: 8px;
+  /* margin: 8px; */
+  justify-content: center;
+}
+
+/* ------inner slider --------- */
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  height: 564px;
+  background-color: var(--color-offWhite);
+}
+
+.item h2 {
+  padding: 0 16px;
+}
+
+.img-carousel {
+  height: 373px;
+  min-height: 373px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-cta {
+  display: flex;
+  justify-content: center;
+
+  width: 214px;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.box-cta > button {
+  display: flex;
+  justify-content: center;
+}
+
+button img {
+  max-width: fit-content;
+}
+
+/* -------------mobile with javascript----------- */
+
+.item-mobile {
+  display: flex;
+  flex-direction: column;
+
+  height: 564px;
+  width: 100%;
+  background-color: var(--color-offWhite);
+}
+/* -----media query for mobile from screen width 390px------- */
+
+@media (width <= 1340px) {
+  .items {
+    display: flex;
+  }
+  .carousel {
+    width: auto;
+  }
+  .container-welcome {
+    width: 70vw;
+  }
+  main {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,203 @@
+/* The main part of the site layout structure*/
+
+main {
+  grid-area: 3 / 2 / span 1 / span 8;
+}
+
+/* ------------------------------------------ */
+
+main {
+  grid-area: 3 / 2 / span 1 / span 8;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 24px;
+  max-width: max-content;
+}
+
+.box-cta {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --------Card--------------- */
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wrap > div {
+  width: 270px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  background-color: var(--color-offWhite);
+  border: 8px solid var(--color-beige);
+}
+
+.card-content {
+  padding: 8px;
+  margin: 8px;
+}
+.card-content p {
+  margin-bottom: 0;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.card-content .card-text {
+  display: flex;
+  gap: 48px;
+}
+
+.card-content .reading {
+  border-top: 1px solid var(--color-lightGrey);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.display-font {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+
+/* -----media query for mobile from screen width 390px------- */
+
+@media only screen and (max-width: 1340px) {
+  .whoiam {
+    visibility: hidden;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrap {
+    justify-content: center;
+  }
+  .wrap > div {
+    max-width: 100vw;
+  }
+}
+
+/* ------------------------------------------ */
+
+/* .wrap {
+  display: grid;
+  gap: 8px;
+}
+
+.wrap > div {
+  width: 270px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+
+  background-color: var(--color-offWhite);
+  border: 8px solid var(--color-beige);
+}
+
+.wrap > div:hover {
+  transform: scale(1.1);
+  transition: 0.6s;
+}
+
+article {
+  border: none;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 24px;
+  max-width: max-content;
+}
+
+.box-cta {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+} */
+
+/* ------------------------------ */
+
+/*
+ */
+
+/* ----media query for mobile-------------- */
+
+/* @media (width < 960px) {
+  .wrap {
+    grid-template-columns: repeat(1, 1fr);
+    align-self: baseline;
+  }
+  .whoiam {
+    visibility: hidden;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 24px repeat(4, 1fr) 24px;
+    grid-template-rows: min-content min-content auto min-content;
+    min-height: 100vh;
+  }
+  header {
+    grid-area: 1 / 1 / span 1 / span 14;
+    background-color: var(--color-celeste-blue);
+  }
+  .title {
+    grid-area: 2 / 2 / span 1 / span 4;
+  }
+
+  main {
+    grid-area: 3 / 2 / span 1 / span 4;
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+  }
+  .wrap > div {
+    width: 100%;
+  }
+  .wrap > div:hover {
+    transform: none;
+    transition: none;
+  }
+} */
+
+/* ------------------------------ */
+/* 
+@media (width >= 960px) and (width < 1330px) {
+  .wrap {
+    grid-template-columns: repeat(2, 1fr);
+    align-self: baseline;
+  }
+  article {
+    grid-area: 3 / 2 / span 1 / span 8;
+    display: flex;
+  }
+} */
+
+/* @media (width >= 1330px) {
+  .wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
