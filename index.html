@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigume | Home </title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/shared.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/carousel.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" defer src="./js/index.js"></script>
+    <!-- Hotjar Tracking Code for Amigume -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3756760, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
+    <!-- spinner -->
+    <div id="loader" class="loading-indicator">
+    </div>
+
     <div class="main-container">
         <header>
             <div class="logo">
@@ -31,71 +42,58 @@
 
         <section class="latest-posts">
             <h1 class="page-title">
-                <a href="posts.html">Latest posts</a>
+                Latest posts
             </h1>
 
-            <div class="carousel">
-                <div class="items">
-                    <!-- --------mobile----------->
-                    <div class="item-mobile">
-                        <div class="img-carousel">
-                            <a href="./post.html"><img src="./assets/images/blog/other-mother-doll.JPG"
-                                    alt="amigurumi blue bear"></a>
-                        </div>
-                        <h2>
-                            <a href="./post.html">Crochet this big and beautifull doll The Other Mother with
-                                Free pattern</a>
-                        </h2>
-                    </div>
-                    <!-- ------------------->
+            <!-- message error -->
+            <div id="error" class="error">
+                <p>There was an error, please try later.</p>
+            </div>
 
-                    <div class="item">
-                        <div class="img-carousel">
-                            <a href="./post.html"><img src="./assets/images/blog/other-mother-doll.JPG"
-                                    alt="amigurumi blue bear"></a>
-                        </div>
-                        <h2>
-                            <a href="./post.html">Crochet this big and beautifull doll The Other Mother with
-                                Free pattern</a>
-                        </h2>
+            <!-- template card -->
+            <template id="post">
+                <div id="loader" class="loading-indicator">
+                </div>
+                <div class="item">
+                    <div class="img-carousel">
+                        <a><img></a>
                     </div>
-                    <div class="item">
-                        <div class="img-carousel"><a href="./post.html"><img src="./assets/images/blog/red-bear.JPG"
-                                    alt="amigurumi blue bear"></a></div>
-                        <h2>
-                            <a href="./post.html">Make this super easy and Cute brown bear amigurumi with
-                                Free pattern</a>
-                        </h2>
+                    <div class="card-content">
+                        <a>
+                            <h2></h2>
+                        </a>
+                    </div>
+                </div>
+            </template>
 
-                    </div>
+            <!-- carousel -->
+            <div id="carousel" class="carousel">
+                <div id="items" class="items">
                     <div class="item">
                         <div class="img-carousel">
-                            <a href="./post.html"><img src="./assets/images/blog/wednesday-doll.JPG"
-                                    alt="amigurumi blue bear"></a>
+                            <a><img></a>
                         </div>
                         <h2>
-                            <a href="./post.html">How to make a Wednesday amigurumi doll easy with Free pattern</a>
+                            <a></a>
                         </h2>
-                    </div>
-                    <div class="item">
-                        <div class="img-carousel">
-                            <a href="./post.html"><img src="./assets/images/blog/bunny.JPG"
-                                    alt="amigurumi blue bear"></a>
-                        </div>
-                        <h2>
-                            <a href="./post.html">Crochet this cute amigurumi white bunny With a free pattern</a>
-                        </h2>
-
                     </div>
                 </div>
 
-                <div class="box-cta">
-                    <button type="button" class="cta">
+                <div id="box-cta" class="box-cta">
+                    <button id="backward-arrow" type="button" class="cta">
                         <img src="./assets/icons/backward-arrow.svg" alt="backward-arrow">
                     </button>
-                    <button type="button" class="cta">
+                    <button id="forward-arrow" type="button" class="cta">
                         <img src="./assets/icons/forward-arrow.svg" alt="forward-arrow">
                     </button>
+
+                    <button id="backward-arrow-mobile" type="button" class="cta">
+                        <img src="./assets/icons/backward-arrow.svg" alt="backward-arrow">
+                    </button>
+                    <button id="forward-arrow-mobile" type="button" class="cta">
+                        <img src="./assets/icons/forward-arrow.svg" alt="forward-arrow">
+                    </button>
+
                 </div>
             </div>
         </section>
@@ -131,11 +129,12 @@
 
         <footer>
             <!-- https://love2dev.com/blog/html-website-copyright/ -->
-            <div><a href="not-available.html"><small>&copy; Copyright 2023 Fernanda Gomes. All Rights
-                        Reserved</small></a></div>
-
+            <div class="footer-copyright">
+                <a href="not-available.html">
+                    <small>&copy; Copyright 2023 Fernanda Gomes. All Rights Reserved</small>
+                </a>
+            </div>
             <div>
-
                 <div class="footer-box social-media-footer">
                     <a href="https://www.instagram.com"><img
                             src="assets/icons/icon _instagram_ -_ instagram-1_svgrepo.com.svg" alt="icon Instagram"></a>

@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigume | Posts </title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/shared.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/aside.css">
     <link rel="stylesheet" href="./css/posts.css">
+    <script type="module" defer src="js/posts.js"></script>
+    <!-- Hotjar Tracking Code for Amigume -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3756760, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
+    <!-- spinner -->
+    <div id="loader" class="loading-indicator"></div>
+
     <div class="main-container">
         <header>
             <div class="logo">
@@ -31,236 +41,58 @@
 
         <div class="title">
             <h1 class="page-title">Posts</h1>
+
+            <!-- message error -->
+            <div id="error" class="error">
+                <p>There was an error, please try later.</p>
+            </div>
         </div>
+
         <main>
             <article>
+                <!-- template card -->
+                <template id="post">
+                    <div>
+                        <a><img></a>
+                        <div class="card-content">
+                            <a>
+                                <h2></h2>
+                            </a>
+                            <div class="card-text text_small">
+                                <div class="author">
+                                    <p>By<span></span></p>
+                                </div>
+                                <p id="date"></p>
+                            </div>
+                            <p>
+                            </p>
+                            <div class="reading">
+                                <a class="display-font">Continue reading</a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <!-- the end -->
+
                 <!-- start API Wordpress -->
-                <div class="wrap">
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
 
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <a href="./post.html"><img src="./assets/images/blog/brown-bear.JPG"
-                                alt="Brown bear amigurumi"></a>
-                        <div class="card-content">
-                            <h2><a href="./post.html">How to crochet a cute amigurumi girl bunny Free Pattern</a></h2>
-                            <div class="card-text text_small">
-                                <p>By Fer</p>
-                                <p>August 28,2023</p>
-                            </div>
-
-                            <p>
-                                Hey guys! Today you can learn how to make this beautiful amigurumi and have fun doing
-                                it.
-                                Thank you to Fernanda's Craft for providing...
-                            </p>
-                            <div class="reading">
-                                <a href="./post.html" class="display-font">Continue reading</a>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="wrap" id="posts">
                 </div>
-                <!-- ----javascript------------ -->
-                <div class="box-cta">
+
+                <div id="view-more" class="box-cta">
                     <button type="submit" class="cta">
-                        <a href="./posts.html">View more</a>
+                        View more
                     </button>
                 </div>
 
-                <!-- ----fine--------------------------- -->
                 <!-- end API Wordpress -->
+
             </article>
         </main>
+
         <aside class="whoiam">
             <div>
-                <!-- start API Wordpress -->
+
                 <section>
                     <figure>
                         <img src="./assets/images/blog/profile.photo.png" alt="profile image" class="fit-image">
@@ -301,10 +133,9 @@
                     </p>
                     <p>Thank you</p>
                 </section>
-                <!-- end API Wordpress -->
+
             </div>
         </aside>
-
         <footer>
             <div><a href="not-available.html"><small>Copyright&copy; 2023 Fernanda Gomes. All Rights
                         Reserved</small></a></div>

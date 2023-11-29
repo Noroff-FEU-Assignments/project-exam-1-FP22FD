@@ -1,14 +1,16 @@
 header {
   display: flex;
   flex-direction: column;
+
   border-top: 14px solid var(--color-rosa);
+  background-color: var(--color-beige);
 }
 
 .logo {
   display: flex;
   justify-content: center;
 
-  height: 115px;
+  height: 100px;
 }
 
 nav {
@@ -16,7 +18,7 @@ nav {
   justify-content: center;
   gap: 48px;
 
-  margin-top: 40px;
+  margin-top: 24px;
   margin-bottom: 25px;
 }
 
@@ -27,13 +29,7 @@ nav a {
   color: var(--color-primaryFont);
 }
 
-a:hover,
-a:hover * {
-  transition: all 0.3s ease;
-  color: var(--color-rosa);
-}
-
-/* -----media query for mobile from screen width 390px------- */
+/* -------Styles for mobile 390px------- */
 
 @media only screen and (max-width: 1340px) {
   nav {

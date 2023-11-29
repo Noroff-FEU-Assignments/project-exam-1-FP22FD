@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigume | Contact </title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/shared.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/aside.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <script type="module" defer src="/js/contact.js"></script>
+    <!-- Hotjar Tracking Code for Amigume -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3756760, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
@@ -33,6 +40,20 @@
             <h1 class="page-title">Contact</h1>
         </div>
         <main>
+            <dialog>
+                <div class="container-dialog">
+                    <h1>Thank you</h1>
+                    <p>You have successfully sent your message. We'll get in touch with you as soon as
+                        possible!
+                    </p>
+                    <div class="box-cta">
+                        <button type="submit" class="cta">
+                            <a href="./index.html">Home</a>
+                        </button>
+                    </div>
+                </div>
+            </dialog>
+
             <div>
                 <div class="post-content">
                     <p>I love getting emails from readers! Feel free to introduce yourself, tell a joke, or share a news
@@ -41,57 +62,48 @@
                     </p>
                     <p>Find me on Instagram, Pinterest and YouTube!</p>
                 </div>
-                <form method="get" action="/successful.html">
+
+                <form id="contact-form" method="get">
                     <div class="name-email">
                         <div class="field-name">
                             <label for="input-name">Full name<span class="required" aria-hidden="">*</span></label>
-                            <input id="input-name" type="text" name="name" placeholder="Sophia Smith">
+                            <input id="input-name" type="text" name="name" required placeholder="example: Ben Smith">
+                            <div class="message-error" id="name-error">Please enter your first name</div>
                         </div>
 
                         <div class="field-email">
                             <label for="input-email">Email address<span class="required" aria-hidden="">*</span></label>
-                            <input id="input-email" type="email" name="email" placeholder="sophissmith@gmail.com">
+                            <input id="input-email" type="email" name="email" required
+                                placeholder="(must have a value and be formatted like an email address)">
+                            <div class="message-error" id="email-error">Please enter a valid email address</div>
                         </div>
                     </div>
                     <div>
-                        <label for="input-subject">Subject</label>
-                        <input id="input-subject" type="text" name="subject">
+                        <label for="input-subject">Subject<span class="required" aria-hidden="">*</span></label>
+                        <input id="input-subject" type="text" name="subject" required
+                            placeholder="(a short summary of your inquiry)">
+                        <div class="message-error" id="subject-error">Please type the subject</div>
                     </div>
                     <div>
                         <label for="input-message">Message<span class="required" aria-hidden="">*</span></label>
-                        <textarea id="input-message" name="input-message">
-                        </textarea>
+                        <textarea id="input-message" name="input-message" minlength="10" required></textarea>
+                        <div class="message-error" id="message-error">Please type at least 10 characters in the message
+                        </div>
                     </div>
                     <div class="required-field">
                         <p><span class="required" aria-hidden="">*</span>Required field</p>
                     </div>
                     <div>
-                        <button type="submit" class="cta">
-                            <a href="./successful.html">Submit</a>
+                        <button type="button" class="cta">
+                            Submit
                         </button>
                     </div>
                 </form>
             </div>
-            <!-- -------javascript------- -->
-
-            <!-- https://www.w3schools.com/howto/howto_css_overlay.asp -->
-            <div class="overlay">
-                <div class="txt-overlay">
-                    <h1>Thank you</h1>
-                    <p>You have successfully sent your message. We'll get in touch with you as soon as possible!</p>
-                    <div class="box-cta">
-                        <button type="submit" class="cta">
-                            <a href="./index.html">Home</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- ---fine overlay---- -->
-
         </main>
+
         <aside class="whoiam">
             <div>
-                <!-- start API Wordpress -->
                 <section>
                     <figure>
                         <img src="./assets/images/blog/profile.photo.png" alt="profile image" class="fit-image">
@@ -132,9 +144,9 @@
                     </p>
                     <p>Thank you</p>
                 </section>
-                <!-- end API Wordpress -->
             </div>
         </aside>
+
         <footer>
             <div><a href="not-available.html"><small>Copyright&copy; 2023 Fernanda Gomes. All Rights
                         Reserved</small></a></div>

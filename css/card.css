@@ -1,0 +1,30 @@
+/* -----styles for default cards----- */
+
+.author p {
+  display: flex;
+
+  gap: 24px;
+}
+
+.author span {
+  font-weight: bold;
+  color: var(--color-purple);
+}
+
+.display-font {
+  font-weight: bold;
+  color: var(--color-purple);
+}
+.card-content {
+  padding: 8px;
+  margin: 8px;
+}
+
+.card-content p {
+  margin-bottom: 0;
+}
+
+.card-content .card-text {
+  display: flex;
+  justify-content: space-between;
+}

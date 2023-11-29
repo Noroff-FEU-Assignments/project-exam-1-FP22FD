@@ -8,9 +8,14 @@
   src: url("/assets/fonts/Mulish/static/Mulish-Regular.ttf") format(truetype);
 }
 
-/* --------------- Desktop ---------------------------*/
+@font-face {
+  font-family: "Tenor Sans";
+  src: url("./../assets/fonts/Ternor/TenorSans-Regular.ttf") format(truetype);
+}
 
-/* https://typescale.com/ */
+/*--------------Tipography-----------------------*/
+
+/* Ref: https://typescale.com/ */
 html {
   /*16px*/
   font-size: 100%;
@@ -40,7 +45,6 @@ h5 {
 }
 
 h1 {
-  /* margin-top: 0; */
   font-size: 1.802rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -67,9 +71,10 @@ h5 {
 small,
 .text_small {
   font-size: 0.889rem;
+  font-family: "Tenor Sans";
 }
 
-/*---------------------------------------*/
+/*--------------colors-----------------------*/
 
 :root {
   --color-offWhite: #fcfcfc;
@@ -83,12 +88,11 @@ small,
   /* Used for input */
   --color-lightPurple: rgba(108, 91, 123, 0.2);
 
-  /* Used for accents, links */
+  /* Used for accents, links, CTAs */
   --color-purple: #6c5b7b;
 
   /* Used for CTAs */
   /* --color-lightOrange: #f8b195; */
-  --color-lightOrange: #6c5b7b;
 
   /* Used for head, hover */
   --color-rosa: #f67280;
@@ -103,7 +107,7 @@ small,
   --my-border: 8px solid #fff7f3;
 }
 
-/* ------------------------------------------- */
+/* ------------utilities----------------------- */
 * {
   box-sizing: border-box;
 }
@@ -111,19 +115,19 @@ small,
 a {
   text-decoration: none;
   color: var(--color-primaryFont);
-  /* font-size: 18px; */
 }
 
-/* ----------------------------------------------- */
+/* -------------styles for H1-------------------- */
 
 .page-title {
   display: flex;
   flex-direction: column;
-  /* margin-top: 96px; */
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  align-items: center;
+
+  margin-top: 24px;
 }
 
-/* -------------------------------------------------- */
+/* -----------styles for inputs------------------ */
 
 input[type="text"] {
   margin-top: 4px;
@@ -173,7 +177,7 @@ input[name="subject"]:focus {
   font-weight: bold;
 }
 
-/* -------------mobile--------------------------- */
+/* --------------Styles for mobile 390px------------ */
 
 @media (width <= 1330px) {
   /* https://typescale.com/ */
