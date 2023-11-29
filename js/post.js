@@ -69,4 +69,3 @@ async function displayPost(id) {
 }
 
 displayPost(id);
-hotjar();
