@@ -21,6 +21,7 @@ article h2 {
 
 article img:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 /* .container-dialog {
@@ -64,7 +65,6 @@ dialog figure img {
   max-width: 90vw;
   max-height: 90vh;
 
-  cursor: pointer;
   transition: 0.6s;
 }
 
