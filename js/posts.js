@@ -39,11 +39,18 @@ async function fetchCurrentPagePosts(currentPage) {
     url.searchParams.append("orderby", "date");
     url.searchParams.append("order", "desc");
     url.searchParams.append("per_page", "10");
-    url.searchParams.append("page", `${currentPage}`);
+
     // url.searchParams.append("page", currentPage.toString());
+    url.searchParams.append("page", `${currentPage}`);
+
+    // url.searchParams.append(
+    //   "_fields",
+    //   "id,date,slug,title,link,excerpt.rendered,_links,_embedded,yoast_head_json.description,yoast_head_json.author.name"
+    // );
+
     url.searchParams.append(
       "_fields",
-      "id,date,slug,title,link,excerpt.rendered,_links,_embedded,yoast_head_json.description"
+      "id,date,slug,title,link,excerpt.rendered,_links,_embedded,yoast_head_json.description,yoast_head_json.author.name"
     );
     url.searchParams.append("_embed", "author,wp:featuredmedia");
 
@@ -83,7 +90,7 @@ function appendPosts(data) {
     let title = item.title.rendered;
     post.querySelector("h2").innerText = title;
 
-    post.querySelector("span").innerText = item._embedded["author"][0].name;
+    post.querySelector("span").innerText = item.yoast_head_json.author;
     post.querySelector(".card-content>p").innerHTML = item.yoast_head_json.description;
 
     // querySelectorAll returns a NodeList...so, use for loop

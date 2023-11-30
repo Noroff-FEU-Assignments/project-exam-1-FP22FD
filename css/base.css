@@ -154,20 +154,20 @@ textarea {
 
 textarea[name="input-message"]:focus {
   border-color: transparent;
-  outline: 2px solid var(--color-rosa);
+  outline: 2px solid var(--color-secondaryFont);
   box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
 }
 
 input[name="email"]:focus {
   border: 0;
-  outline: 2px solid var(--color-rosa);
+  outline: 2px solid var(--color-secondaryFont);
   box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
 }
 
 input[name="name"]:focus,
 input[name="email"]:focus,
 input[name="subject"]:focus {
-  outline: 2px solid var(--color-rosa);
+  outline: 2px solid var(--color-secondaryFont);
   box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
 }
 

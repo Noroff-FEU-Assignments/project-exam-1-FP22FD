@@ -1,6 +1,5 @@
 import { settings } from "./settings.js";
 import { displayElement } from "./shared.js";
-// import { hotjar } from "./hojar.js";
 
 function displaySpinner(visible) {
   displayElement(visible, "#loader", "block");
