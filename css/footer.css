@@ -19,8 +19,3 @@ footer .social-media-footer {
 footer .social-media-footer a:hover {
   transform: scale(1.1);
 }
-
-.footer-copyright {
-  width: 100%;
-  text-align: center;
-}
