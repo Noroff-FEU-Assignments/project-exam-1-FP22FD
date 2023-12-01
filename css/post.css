@@ -35,19 +35,29 @@ article img:hover {
 } */
 
 dialog {
-  position: fixed;
-  /* z-index: 1; */
+  /* override default dialog */
+  /* position: fixed; */
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
 
-  /* padding-top: 100px; */
+  /* positioning */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+}
 
-  /* background-color: rgb(0, 0, 0); */
-  background-color: rgba(0, 0, 0, 0.5);
-
-  border: none;
+dialog .container-figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 /* lo stesso codice sta sendo condiviso nel post: spostare?  */
