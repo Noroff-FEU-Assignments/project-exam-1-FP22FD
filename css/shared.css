@@ -90,7 +90,8 @@ button.cta {
   cursor: pointer;
 }
 
-button.cta:hover {
+button.cta:hover,
+.cta a:hover {
   transition: all 0.3s ease;
   color: var(--color-rosa);
 }
@@ -100,6 +101,7 @@ button.cta:hover {
 .cta a {
   display: flex;
   justify-content: center;
+  color: var(--color-offWhite);
 }
 
 /*-------------------message error------------------*/

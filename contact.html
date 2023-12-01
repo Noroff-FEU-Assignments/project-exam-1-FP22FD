@@ -8,7 +8,7 @@
     <meta name="description" content="Get in touch with me if you would like more information about the patterns.">
     <title>Amigume | Contact </title>
     <link rel="stylesheet" href="./css/contact.css">
-    <script type="module" defer src="/js/contact.js"></script>
+    <script type="module" src="/js/contact.js"></script>
     <!-- Hotjar Tracking Code for Amigume -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -48,10 +48,8 @@
                     <p>You have successfully sent your message. We'll get in touch with you as soon as
                         possible!
                     </p>
-                    <div class="box-cta">
-                        <button type="submit" class="cta">
-                            <a href="./index.html">Home</a>
-                        </button>
+                    <div class="cta">
+                        <a href="./index.html">Home</a>
                     </div>
                 </div>
             </dialog>
@@ -67,32 +65,33 @@
                 <form id="contact-form" method="get">
                     <div class="name-email">
                         <div class="field-name">
-                            <label for="input-name">Full name<span class="required" aria-hidden="">*</span></label>
+                            <label for="input-name">Full name<span class="required" aria-hidden="true">*</span></label>
                             <input id="input-name" type="text" name="name" required placeholder="example: Ben Smith">
                             <div class="message-error" id="name-error">Please enter your first name</div>
                         </div>
 
                         <div class="field-email">
-                            <label for="input-email">Email address<span class="required" aria-hidden="">*</span></label>
+                            <label for="input-email">Email address<span class="required"
+                                    aria-hidden="true">*</span></label>
                             <input id="input-email" type="email" name="email" required
                                 placeholder="(must have a value and be formatted like an email address)">
                             <div class="message-error" id="email-error">Please enter a valid email address</div>
                         </div>
                     </div>
                     <div>
-                        <label for="input-subject">Subject<span class="required" aria-hidden="">*</span></label>
+                        <label for="input-subject">Subject<span class="required" aria-hidden="true">*</span></label>
                         <input id="input-subject" type="text" name="subject" required
                             placeholder="(a short summary of your inquiry)">
                         <div class="message-error" id="subject-error">Please type the subject</div>
                     </div>
                     <div>
-                        <label for="input-message">Message<span class="required" aria-hidden="">*</span></label>
+                        <label for="input-message">Message<span class="required" aria-hidden="true">*</span></label>
                         <textarea id="input-message" name="input-message" minlength="10" required></textarea>
                         <div class="message-error" id="message-error">Please type at least 10 characters in the message
                         </div>
                     </div>
                     <div class="required-field">
-                        <p><span class="required" aria-hidden="">*</span>Required field</p>
+                        <p><span class="required" aria-hidden="true">*</span>Required field</p>
                     </div>
                     <div>
                         <button type="button" class="cta">
