@@ -32,7 +32,7 @@ article {
   display: flex;
   flex-direction: column;
 
-  background-color: var(-color-offWhite);
+  background-color: var(--color-offWhite);
   border: var(--my-border);
 }
 
