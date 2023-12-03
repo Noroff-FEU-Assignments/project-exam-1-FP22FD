@@ -6,6 +6,10 @@ function displaySpinner(visible) {
   displayElement(visible, "#loader", "block");
 }
 
+function displayBtn(visible) {
+  displayElement(visible, "#box-cta", "flex");
+}
+
 function displayError(visible) {
   displayElement(visible, "#error", "block");
 }
@@ -29,7 +33,7 @@ btnPrevMobile.addEventListener("click", prevSlideMobile);
 
 // Slide images  according to the desktop button clicks
 function nextSlide() {
-  slideshowPosition += 4; //slideshowPosition = slideshowPosition + 4 -> (0 + 4 = 4)
+  slideshowPosition += 4;
   if (slideshowPosition > 8) {
     slideshowPosition = 0;
   }
@@ -44,7 +48,6 @@ function previousSlide() {
   }
 
   updatePosts(posts);
-  console.log(slideshowPosition);
 }
 
 // Slide images  according to the mobile button clicks
@@ -70,6 +73,7 @@ function prevSlideMobile() {
 async function displayPosts() {
   try {
     displaySpinner(true);
+    displayBtn(false);
     displayError(false);
 
     const url = new URL(`${settings.wp_baseurl}/wp-json/wp/v2/posts`);
@@ -86,14 +90,15 @@ async function displayPosts() {
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log("data", data);
 
     posts = data;
 
+    displayBtn(true);
     updatePosts(data);
   } catch (e) {
     displayError(true);
     displaySpinner(false);
+    displayBtn(true);
   } finally {
     displaySpinner(false);
   }

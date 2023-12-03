@@ -32,7 +32,6 @@ document.querySelector("article img").addEventListener("click", function (event)
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-console.log(id);
 
 let data = undefined;
 
@@ -45,7 +44,6 @@ async function displayPost(id) {
 
     const response = await fetch(url);
     data = await response.json();
-    console.log("data", data);
 
     const article = document.querySelector("article");
 

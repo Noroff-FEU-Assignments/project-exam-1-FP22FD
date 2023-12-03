@@ -9,6 +9,8 @@ main {
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+
+  min-height: 40vh;
 }
 
 /* -------------------article------------------- */

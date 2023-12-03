@@ -13,9 +13,8 @@
   src: url("./../assets/fonts/Ternor/TenorSans-Regular.ttf") format(truetype);
 }
 
-/*--------------Tipography-----------------------*/
+/*--------------Typography-----------------------*/
 
-/* Ref: https://typescale.com/ */
 html {
   /*16px*/
   font-size: 100%;
@@ -171,7 +170,6 @@ input[name="subject"]:focus {
   box-shadow: 0 4px 8px 0 var(--color-secondaryFont);
 }
 
-/* Ref:https://www.accessibility-developer-guide.com/examples/forms/required/[...]%20accessible*/
 .required {
   color: var(--color-darkRed);
   font-weight: bold;
@@ -180,7 +178,6 @@ input[name="subject"]:focus {
 /* --------------Styles for mobile 390px------------ */
 
 @media (width <= 1330px) {
-  /* https://typescale.com/ */
   body {
     line-height: 1.35;
   }

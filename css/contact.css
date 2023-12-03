@@ -75,9 +75,6 @@ form > div {
   margin-top: 2px;
 }
 
-/* lo stesso codice sta sendo condiviso nel contact: spostare? */
-
-/* ref: https://www.w3schools.com/jsref/met_dialog_showModal.asp */
 dialog::backdrop {
   background-color: #888888af;
 }

@@ -2,6 +2,8 @@ const form = document.querySelector("form button");
 
 form.addEventListener("click", validateForm);
 
+// ------------------------------------------
+
 function validateForm(event) {
   event.preventDefault();
 
@@ -58,9 +60,10 @@ function validateForm(event) {
     isFormValid.showModal();
   } else {
     isFormValid.style.display = "none";
-    console.log("validation passed");
   }
 }
+
+// ------------------------------------------
 
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
