@@ -1,68 +1,75 @@
-## Project Exam 1
+# Amigume Website
 
-## Goal
+<!-- A simple overview of use/purpose. -->
 
-To put into practice the skills learned over your first year of studies.
+A headless Wordpress REST API blog dedicated to my favorite subject - amigurumi!
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+<img src="docs/ex1-amigume-desktop.png" height="300px" alt="Desktop">
+<img src="docs/ex1-amigume-mobile.png" height="300px" alt="Mobile">
 
-### Home Page
+## Noroff Project Exam 1 for Frontend development
 
-The home page should feature a 'Latest Posts' section, designed as a carousel (slider) for the desktop version. As an example, you could display four posts at a time, although you're welcome to adjust this number to better suit your design. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. For the mobile version, you are free to alter the layout as you deem appropriate, without being tied to a carousel format.
+_Brief_
 
-### Blog Page
+The main goal of this repository is to implement a headless Wordpress REST API frontend blog of our chosen topic, deployed using Netlify.
+HTML, CSS, and JavaScript: should be used to develop the site into a functional, well-presented website.
+There were several criteria to be met, such as:
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+- a carousel with "Latest Posts",
+- fetch dynamically the blog list with a `view more` functionality,
+- fetch dynamically a specific blog post by ID,
+- create a form with javascript validation rules.
+- modal popups: `zoom image` in the blog post, `send message` confirmation.
 
-### Blog Specific Page
+All with neat semantics, responsiveness, and CSS that follows the DRY principle.
+The site should be WCAG compliant, and accessibility should be taken into account.
+The project didn't allow us to use any frameworks, so I had to code everything myself.
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+## Description
 
-If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+<!-- An in-depth paragraph about your project and overview of use. -->
 
-### Contact page
+The website design and implementation has been made with `Figma` and `HTML` & `CSS`:
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+- Trello: website task planning,
+- Figma: `Personas` target audience, a flow with website structure, `Moonboard`,
+- Figma: prototypes for mobile and desktop version (color, contrast, font, fonttype - UX/UI),
+- Google fonts,
+- Wireframes: medium-fidelity for mobile and desktop version,
+- Semantic html 5,
+- Responsive design (concepts, media queries, etc),
+- DRY (css variables, structured code, etc),
+- Image optimization,
+- Accessibility concepts (WCAG),
+- Developer tools (VS Code, Prettier, DevTools, Github, Netlify, etc),
+- Code validation tools,
+- WordPress: provided custom content for 20 posts,
+- WordPress APIs: to allow the frontend to fetch the WordPress blog posts and related media,
+- Local: Local WordPress development,
+- Postman to work with REST APIs,
+- JavaScript (calls to the WordPress REST APIs to fetch data, form validation rules, error handling),
+- Usability Test UX:
+  - Qualitative testing with user interviews,
+  - Quantitative testing with Hotjar tool
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+The website code has been validated using the following tools:
 
-### WordPress
+- check html validity: <https://validator.w3.org/>
+- check css validity: <https://jigsaw.w3.org/css-validator/>
+- check redirect links: <https://validator.w3.org/checklink>
+- check accessibility: <https://www.accessibilitychecker.org/>
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+## Dependencies
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+<!-- - Describe any prerequisites, libraries, OS version, etc., needed before installing the program.
+- ex. Windows 10 -->
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+To develop the website I have used `Visual Studio Code` with `Prettier` formatter extension.
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+No other tools are required to compile or run the website.
 
-## Level 1 Process
+Links:
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
-
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
-
+- [Figma Desktop prototype](https://www.figma.com/proto/j9DCYn2nf9dLMGeTTmQz1v/Project-Exam-1?page-id=2239%3A3059&type=design&node-id=2258-11867&viewport=2155%2C779%2C0.11&t=hH3XxxUh9q8gsLA7-1&scaling=scale-down&starting-point-node-id=2258%3A11867&mode=design)
+- [Figma Mobile prototype](https://www.figma.com/proto/j9DCYn2nf9dLMGeTTmQz1v/Project-Exam-1?page-id=2261%3A12627&type=design&node-id=2280-25876&viewport=500%2C304%2C0.06&t=FYc0BW1JcPRbyQFG-1&scaling=scale-down&starting-point-node-id=2280%3A25876&mode=design)
+- [Netlify website](https://spectacular-smakager-27e9f9.netlify.app/)
